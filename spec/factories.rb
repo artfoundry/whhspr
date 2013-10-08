@@ -1,11 +1,25 @@
+require 'Faker'
+
 FactoryGirl.define do
+
   factory :comment do
-    body      "I still don't think he's better than Tom Brady."
+    body      Faker::Lorem.sentence(3)
     discussion
   end
 
   factory :discussion do
-    title     "Peyton Manning"
-    body      "Will he lead the Broncos to the Super Bowl??"
+    title     Faker::Lorem.sentence()
+    body      Faker::Lorem.sentence(3)
+
+    factory :discussion_with_comments do
+      after(:create) do |discussion|
+        FactoryGirl.create_list(:comment, 5, discussion: discussion)
+      end
+    end
   end
+
+  sequence :discussion do |n|
+    ""
+  end
+
 end
