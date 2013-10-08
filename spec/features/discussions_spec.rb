@@ -32,5 +32,6 @@ describe "discussions request" do
     it {should have_content(discussions[4].title)}
   end
 
-
 end
+
+
