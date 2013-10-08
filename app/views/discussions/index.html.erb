@@ -1,3 +1,5 @@
 <% @discussions.each do |discussion| %>
-<%= discussion.title %><br />
-                    <% end %>
+<%= discussion.title %><br>
+<% end %>
+
+<%= render :partial => 'discussions/inline_form' %>
