@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "Discussion" do
+describe "discussion" do
 
   subject { page }
 
@@ -10,6 +10,13 @@ describe "Discussion" do
 
     it {should have_content(discussion.title)}
     it {should have_content(discussion.body)}
+  end
+
+  describe "displays comments" do
+    let(:comment) {FactoryGirl.create(:comment)}
+    before {visit discussion_path(comment)}
+
+    it {should have_content(comment.body)}
   end
 
 end
