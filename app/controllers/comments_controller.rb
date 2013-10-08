@@ -1,7 +1,9 @@
 class CommentsController < ApplicationController
 
-  def new
-    @Comment = Comment.new
+  def create
+    @comment = Comment.new(params[:comment])
+    @comment.save
+    redirect_to discussion_path(@comment.discussion)
   end
 
 end

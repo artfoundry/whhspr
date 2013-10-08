@@ -2,6 +2,7 @@ class DiscussionsController < ApplicationController
 
   def show
     @discussion = Discussion.find(params[:id])
+    @comment = Comment.new
   end
 
   def index
