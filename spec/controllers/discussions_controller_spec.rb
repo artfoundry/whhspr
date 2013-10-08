@@ -19,4 +19,14 @@ describe DiscussionsController do
     end
   end
 
+  describe "POST create" do
+    let(:thread) {FactoryGirl.create(:discussion)}
+
+    it "creates a new @discussion" do
+      post :create, :discussion => {title: thread.title, body: thread.body}
+      expect(assigns(:discussion).title).to eq(thread.title)
+      expect(assigns(:discussion).body).to eq(thread.body)
+    end
+  end
+
 end
