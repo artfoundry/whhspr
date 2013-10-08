@@ -21,11 +21,15 @@ end
 group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails'
+  gem 'factory_girl_rails'
 end
 
 group :test do
   gem 'selenium-webdriver'
   gem 'capybara'
+  gem 'jasmine'
+  gem 'faker'
+  gem 'launchy'
 end
 
 group :production do
