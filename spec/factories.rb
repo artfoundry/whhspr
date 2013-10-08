@@ -18,8 +18,4 @@ FactoryGirl.define do
     end
   end
 
-  sequence :discussion do |n|
-    ""
-  end
-
 end
