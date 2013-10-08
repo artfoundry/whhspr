@@ -30,6 +30,7 @@ group :test do
   gem 'jasmine'
   gem 'faker'
   gem 'launchy'
+  gem 'shoulda-matchers'
 end
 
 group :production do
