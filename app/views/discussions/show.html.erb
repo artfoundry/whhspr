@@ -1,2 +1,7 @@
 <%= @discussion.title %>
 <%= @discussion.body %>
+<br>
+<% @discussion.comments.each do |comment| %>
+  <%= comment.body %>
+  <br>
+<% end %>
