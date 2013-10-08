@@ -4,4 +4,8 @@ class DiscussionsController < ApplicationController
     @discussion = Discussion.new
   end
 
+  def show
+    @discussion = Discussion.find(params[:id])
+  end
+
 end
