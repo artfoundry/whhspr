@@ -1,6 +1,8 @@
 Create new thread:
 <%= render :partial => 'discussions/inline_form' %>
-
+<p>
+  Discussions:
+</p>
 <% @discussions.each do |discussion| %>
-<%= discussion.title %><br>
+<%= link_to discussion.title %><br>
 <% end %>
