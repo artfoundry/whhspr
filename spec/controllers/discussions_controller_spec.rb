@@ -20,7 +20,7 @@ describe DiscussionsController do
   end
 
   describe "POST create" do
-    let(:thread) {FactoryGirl.create(:discussion)}
+    let(:thread) {FactoryGirl.build(:discussion)}
 
     it "creates a new @discussion" do
       post :create, :discussion => {title: thread.title, body: thread.body}

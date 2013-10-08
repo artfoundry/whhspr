@@ -34,4 +34,17 @@ describe "discussions request" do
 
 end
 
+feature "discussions" do
 
+  let(:discussion) { FactoryGirl.build(:discussion) }
+
+  scenario "User creates a new discussion",  :js => true do
+    visit discussions_path
+    fill_in "Title", :with => discussion.title
+    fill_in "Body", :with => discussion.body
+
+    click_button "Create Discussion"
+
+    expect(page).to have_text(discussion.title)
+  end
+end
