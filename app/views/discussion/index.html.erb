@@ -2,3 +2,12 @@
 <ul>
   <li>Why is RaoRao called RaoRao?</li>
 </ul>
+
+<%= form_tag("/discuss", method: "post") do %>
+  <%= label_tag(:title, "Title") %><br>
+  <%= text_field_tag(:title) %><br>
+  <%= label_tag(:body, "Content") %><br>
+  <%= text_area_tag(:body, "", size: "30x10") %><br>
+  <%= label_tag() %>
+  <%= submit_tag("Discuss") %>
+<% end %>
