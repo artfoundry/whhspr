@@ -1,0 +1,13 @@
+<h1> Discussions </h1>
+<ul>
+  <li>Why is RaoRao called RaoRao?</li>
+</ul>
+
+<%= form_for @discussion, url: {action: "create"}, html: {class: "discussion_form"} do |f| %>
+  <%= f.label :title, "Title" %><br>
+  <%= f.text_field :title %><br>
+  <%= f.label :body, "Content" %><br>
+  <%= f.text_area :body, size: "30x10" %><br>
+  <%= f.label() %>
+  <%= f.submit "Discuss" %>
+<% end %>
