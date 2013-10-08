@@ -5,3 +5,19 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+DISCUSSIONS = 10
+COMMENTS_PER_DISCUSSION = 3
+
+DISCUSSIONS.times do
+  discussion = Discussion.create(
+      :title = Faker::Lorem.sentence()
+      :body = Faker::Lorem.sentence(3)
+    )
+  COMMENTS_PER_DISCUSSION.times do
+    Comment.create(
+      :body = Faker::Lorem.sentence(3)
+      :discussion = discussion
+    )
+  end
+end
