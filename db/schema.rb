@@ -19,4 +19,11 @@ ActiveRecord::Schema.define(:version => 20131008005705) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "discussions", :force => true do |t|
+    t.string   "body"
+    t.string   "title"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
 end
