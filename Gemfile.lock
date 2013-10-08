@@ -170,9 +170,6 @@ DEPENDENCIES
   rspec-rails
   sass-rails (~> 3.2.3)
   selenium-webdriver
-<<<<<<< HEAD
   shoulda-matchers
-=======
->>>>>>> master
   sqlite3
   uglifier (>= 1.0.3)

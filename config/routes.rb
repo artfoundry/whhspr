@@ -1,6 +1,6 @@
 Whhspr::Application.routes.draw do
 
-  resources :discussion
+  resources :discussions, :comments
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
