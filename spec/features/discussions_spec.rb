@@ -36,9 +36,9 @@ end
 
 feature "discussions" do
 
-  let(:discussion) { FactoryGirl.build(:discussion) }
+  let(:discussion) { FactoryGirl.create(:discussion) }
 
-  scenario "User creates a new discussion",  :js => true do
+  scenario "User creates a new discussion" do
     visit discussions_path
     fill_in "Title", :with => discussion.title
     fill_in "Body", :with => discussion.body
@@ -46,5 +46,11 @@ feature "discussions" do
     click_button "Create Discussion"
 
     expect(page).to have_text(discussion.title)
+  end
+
+  scenario "User clicks discussion link and discussion page loads" do
+    visit discussions_path(discussion)
+    click_link discussion.title
+    expect(current_path).to eq(discussion_path(discussion))
   end
 end

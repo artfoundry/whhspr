@@ -1,6 +1,9 @@
-<%= @discussion.title %>
+Title: <%= @discussion.title %><br>
+Content:<br>
 <%= @discussion.body %>
-<br>
+<p>
+Comments:
+</p>
 <% @discussion.comments.each do |comment| %>
   <%= comment.body %>
   <br>

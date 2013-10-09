@@ -4,5 +4,5 @@ Create new thread:
   Discussions:
 </p>
 <% @discussions.each do |discussion| %>
-<%= link_to discussion.title %><br>
+<%= link_to discussion.title, action: "show", id: discussion.id %><br>
 <% end %>
