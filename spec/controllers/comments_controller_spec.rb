@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe CommentsController do
   describe "POST create" do
-    let(:new_comment) {FactoryGirl.create(:comment)}
+    let(:new_comment) {FactoryGirl.build(:comment)}
 
     it "should create a new a comment" do
       post :create, :comment => {body: new_comment.body, discussion_id: new_comment.discussion_id }
